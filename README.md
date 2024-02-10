@@ -22,8 +22,8 @@ Please run the scripts in the following order, **sequentially**.
 For example, to run the experiments for `IHDP`, do
 
 ```
-python script_best_factual.py --ds ihdp
-python script_best_giks.py --ds ihdp
+python script_factual.py --ds ihdp
+python script_giks.py --ds ihdp
 ```
 
 We run factual training for `200` epochs, and then initiate GIKS for `200` epochs. This is to ensure that the model fits on factual sample first and then starts interpolating counterfactuals. Each of these runs is moderated by our `early_stopping` script that chooses models based on the best achievable factual error on the validation dataset. All the baselines are run for `400` epochs. 
