@@ -1,6 +1,6 @@
 # GIKS
 
-This is the code for our paper: Continuous Treatment Effect Estimation using Gradient Interpolation and Kernel Smoothing
+This is the code for our paper: [Continuous Treatment Effect Estimation using Gradient Interpolation and Kernel Smoothing](https://arxiv.org/abs/2401.15447)
 
 # Abstract
 
