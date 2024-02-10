@@ -109,7 +109,7 @@ for ds in datasets:
     ds_seeds = list_to_str(all_seeds[ds])
     lmda_gi = lambda_gis[ds]
 
-    num_epochs = 401
+    num_epochs = 201
 
     expt = "factual-model"
     if num_parts > 1:

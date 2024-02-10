@@ -66,7 +66,6 @@ cu.set_seed(config[constants.SEED])
 
 if __name__ == "__main__":
     num_epoch = config[constants.EPOCHS]
-    verbose = config[constants.VERBOSE]
     dataset_name = config[constants.DATASET]
     dataset_nums = config[constants.DATASET_NUM]
 

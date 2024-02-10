@@ -58,6 +58,39 @@ def dict_print(d: dict):
     return pretty_str
 
 
+def set_dump_path(config):
+    base_args = config[constants.BASELINE_ARGS]
+    gi_args = config[constants.GIKS_ARGS]
+    dataset_name = config[constants.DATASET]
+    if config[constants.ENFORCE_BASELINE] == True:
+        save_path: Path = (
+            this_dir
+            / "continuous"
+            / "results"
+            / dataset_name
+            / "baseline"
+            / base_args[constants.RUN_ALGOS][0]
+        )
+    else:
+        save_path: Path = (
+            this_dir
+            / "continuous"
+            / "results"
+            / dataset_name
+            / f"GI"
+            / gi_args[constants.MODEL_TYPE]
+        )
+
+    constants.DUMP_PATH = str(save_path.absolute())
+    return True
+
+
+def get_dump_path() -> Path:
+    # with open(this_dir / "continuous" / "results" / "dump_path.txt", "r") as file:
+    #     save_path = file.readlines()[0].strip()
+    return Path(constants.DUMP_PATH)
+
+
 class CPU_Unpickler(pkl.Unpickler):
     def find_class(self, module, name):
         if module == "torch.storage" and name == "_load_from_bytes":

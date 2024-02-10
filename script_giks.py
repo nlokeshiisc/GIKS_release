@@ -109,9 +109,9 @@ for ds in datasets:
     ds_seeds = list_to_str(all_seeds[ds])
     lmda_gi = lambda_gis[ds]
 
-    num_epochs = 101
+    num_epochs = 201
 
-    load_model = "gi-model/best_val_model-?.pt"
+    load_model = "factual-model/best_val_model-?.pt"
 
     expt = "giks-model"
     if num_parts > 1:
@@ -130,16 +130,16 @@ for ds in datasets:
                 {constants.EPOCHS}:{num_epochs}\
                 {constants.ENFORCE_BASELINE}:False\
                 {constants.GIKS_ARGS}.{constants.GI_LAMBDA}:{lambda_gis[ds]}\
-                {constants.GIKS_ARGS}.{constants.PRETRN_EPOCHS}:300\
+                {constants.GIKS_ARGS}.{constants.PRETRN_EPOCHS}:200\
                 {constants.GIKS_ARGS}.{constants.BATCH_SIZE}:128\
-                {constants.GIKS_ARGS}.{constants.TRIGGER_FAR_CTR}:300\
-                {constants.GIKS_ARGS}.{constants.START_EPOCHS}:300\
+                {constants.GIKS_ARGS}.{constants.TRIGGER_FAR_CTR}:200\
+                {constants.GIKS_ARGS}.{constants.START_EPOCHS}:200\
                 {constants.GIKS_ARGS}.{constants.HPM_TUNING}:{False}\
                 {constants.GIKS_ARGS}.{constants.LRN_RATE}:{lr}\
                 {constants.GIKS_ARGS}.{constants.GI_LINEAR_DELTA}:0.05\
                 {constants.GIKS_ARGS}.{constants.GP_LINEAR_DELTA}:0.05\
                 {constants.GIKS_ARGS}.{constants.NEED_FAR_GP}:{True}\
-                {constants.GIKS_ARGS}.{constants.TRIGGER_FAR_CTR}:300\
+                {constants.GIKS_ARGS}.{constants.TRIGGER_FAR_CTR}:200\
                 {constants.GIKS_ARGS}.{constants.GP_LAMBA}:{lambda_gps[ds]}\
                 {constants.GIKS_ARGS}.{constants.ONLY_FAR_CTR}:{True}\
                 {constants.GIKS_ARGS}.{constants.LOAD_MODEL}:{load_model}\

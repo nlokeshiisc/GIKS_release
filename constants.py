@@ -31,6 +31,7 @@ MARGINAL_T_DIST = "marginal_dosage_distribution"
 FWD_FNC = "forward_fnc"
 LOGVAL_EPOCHS = "log_valmetrics_every"
 
+DUMP_PATH = None
 
 DATASET = "dataset"
 DATASET_NUM = "dataset_number"

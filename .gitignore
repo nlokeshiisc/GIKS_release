@@ -133,3 +133,4 @@ dmypy.json
 tcga_single.pkl
 variables.*
 dataset/tcga/tcga.p
+continuous/results/
